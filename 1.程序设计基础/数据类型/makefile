@@ -1,14 +1,13 @@
 cc = g++ -std=c++11
-target = main.cpp
+target = main
+test_target = test
 output = demo
 BIN = Bin/
 
-pre-build:
-	if ! [ -d ./Bin ]; then mkdir ./Bin; fi
 all:
-	mkdir $(BIN)
-	$(cc) $(target) -o $(BIN)demo
-
+	$(cc) $(target).cpp $(test_target).cpp -o $(BIN)demo
+run:
+	$(BIN)demo
 clean:
 	rm -rf $(BIN)*
 	
