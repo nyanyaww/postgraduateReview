@@ -54,6 +54,10 @@ int main()
 
 运行截图如下
 
+![栈的运行截图](./img/output_stack.png)
+
+or
+
 ```shell
 lcs@lcs-PC:~/Desktop/考研的代码/postgraduateReview/2.线性表/2.stack$ make
 gcc main.c -o main
