@@ -111,7 +111,7 @@ int main()
 
 程序的输出
 
-![链表的输出结果](./img/output_linkedlist.png)
+![链表的输出结果](./img/output_linkedlist.jpg)
 
 or
 
