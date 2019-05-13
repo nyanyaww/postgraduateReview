@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-#define LEN 3
 
+#define LEN 3
+#define STACK_NULL -65532
 typedef int DataType;
 
 #define PRINT_TOP_ELEMENT(top_element) printf("Top element is %d\n", top_element)
@@ -41,11 +42,11 @@ Stack push(Stack stack, DataType data)
     {
         stack.top++;
         stack.data[stack.top] = data;  
-        printf("data = %d\n", data);  
+        printf("push data = %d\n", data);  
     }
     else
     {
-        printf("栈满了\n");
+        printf("The stack is full, we can\'t push\n");
     }
     return stack;
 }
@@ -54,11 +55,12 @@ Stack pop(Stack stack)
 {
     if (isEmpty(stack) == False)
     {
+        printf("pop data\n");
         stack.top--;  
     }
     else
     {
-        printf("栈空了\n");
+        printf("The stack is empty, we can\'t pop\n");
     } 
     return stack;
 }
@@ -67,29 +69,27 @@ DataType getTop(Stack stack)
 {
     if(stack.top != -1)
         return stack.data[stack.top];
-    return 0;
+    return STACK_NULL;
 }
 
 int main()
 {
     Stack stack_test = init();
     stack_test = push(stack_test, 1);
+    PRINT_TOP_ELEMENT(getTop(stack_test));
     stack_test = push(stack_test, 2);
     stack_test = push(stack_test, 3);
     stack_test = push(stack_test, 4);
     stack_test = push(stack_test, 5);
     PRINT_TOP_ELEMENT(getTop(stack_test));
 
-    stack_test = pop(stack_test);PRINT_TOP_ELEMENT(getTop(stack_test));
-    stack_test = pop(stack_test);PRINT_TOP_ELEMENT(getTop(stack_test));
     stack_test = pop(stack_test);
     PRINT_TOP_ELEMENT(getTop(stack_test));
-    PRINT_TOP_ELEMENT(getTop(stack_test));
-
     stack_test = pop(stack_test);
-
     PRINT_TOP_ELEMENT(getTop(stack_test));
-
-
+    stack_test = pop(stack_test);
+    PRINT_TOP_ELEMENT(getTop(stack_test));
+    stack_test = pop(stack_test);
+    PRINT_TOP_ELEMENT(getTop(stack_test));
     return 0;
 }
