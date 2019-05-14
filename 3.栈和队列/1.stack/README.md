@@ -58,7 +58,7 @@ int main()
 
 or
 
-```
+```bash
 lcs@lcs-PC:~/Desktop/考研的代码/postgraduateReview/3.栈和队列/1.stack$ make
 gcc main.c -o main
 ./main
@@ -81,7 +81,7 @@ The stack is empty, we can't get
 
 我定义的栈的大小是LEN = 3，这意味着如果我push了3次之后，就不能继续push了，会提示你栈满了才对。对应的程序是在这边。
 
-```
+```bash
 lcs@lcs-PC:~/Desktop/考研的代码/postgraduateReview/3.栈和队列/1.stack$ make
 gcc main.c -o main
 ./main
@@ -98,7 +98,7 @@ The stack is full, we can't push     -> 第5次尝试push，提示栈满了
 然后我们测试了pop的运行情况，我这个-65532是定义的栈空时默认的输出
 `#define STACK_NULL -65532`
 
-```
+```bash
 Top element is 3                     -> 首先getTop 应该输出栈顶元素 = 3
 pop data                             -> 第1次pop
 Top element is 2                     -> 栈顶元素 = 2
