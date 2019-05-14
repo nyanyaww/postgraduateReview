@@ -74,9 +74,9 @@ Top element is 2
 pop data
 Top element is 1
 pop data
-Top element is -65532
+The stack is empty, we can't get
 The stack is empty, we can't pop
-Top element is -65532
+The stack is empty, we can't get
 ```
 
 我定义的栈的大小是LEN = 3，这意味着如果我push了3次之后，就不能继续push了，会提示你栈满了才对。对应的程序是在这边。
@@ -105,7 +105,7 @@ Top element is 2                     -> 栈顶元素 = 2
 pop data                             -> 第2次pop
 Top element is 1                     -> 栈顶元素 = 1
 pop data                             -> 第3次pop
-Top element is -65532                -> 栈顶元素 = STACK_NULL
+The stack is empty, we can't get     -> 判断栈空，然后就不能get了
 The stack is empty, we can't pop     -> 第4次pop，提示不可以了，因为栈空了
-Top element is -65532                -> 栈顶元素 = STACK_NULL
+The stack is empty, we can't get     -> 判断栈空，然后就不能get了
 ```
