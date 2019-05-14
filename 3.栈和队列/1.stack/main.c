@@ -1,11 +1,16 @@
 #include <stdio.h>
 
-
 #define LEN 3
 #define STACK_NULL -65532
 typedef int DataType;
 
-#define PRINT_TOP_ELEMENT(top_element) printf("Top element is %d\n", top_element)
+#define PRINT_TOP_ELEMENT(top_element)                     \
+    {                                                      \
+        if (top_element != STACK_NULL)                     \
+            printf("Top element is %d\n", top_element);    \
+        else                                               \
+            printf("The stack is empty, we can\'t get\n"); \
+    }
 
 typedef struct Stack
 {
@@ -41,8 +46,8 @@ Stack push(Stack stack, DataType data)
     if (isFull(stack) == False)
     {
         stack.top++;
-        stack.data[stack.top] = data;  
-        printf("push data = %d\n", data);  
+        stack.data[stack.top] = data;
+        printf("push data = %d\n", data);
     }
     else
     {
@@ -56,18 +61,18 @@ Stack pop(Stack stack)
     if (isEmpty(stack) == False)
     {
         printf("pop data\n");
-        stack.top--;  
+        stack.top--;
     }
     else
     {
         printf("The stack is empty, we can\'t pop\n");
-    } 
+    }
     return stack;
 }
 
 DataType getTop(Stack stack)
 {
-    if(stack.top != -1)
+    if (stack.top != -1)
         return stack.data[stack.top];
     return STACK_NULL;
 }

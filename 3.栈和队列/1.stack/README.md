@@ -59,7 +59,7 @@ int main()
 or
 
 ```
-lcs@lcs-PC:~/Desktop/考研的代码/postgraduateReview/2.线性表/2.stack$ make
+lcs@lcs-PC:~/Desktop/考研的代码/postgraduateReview/3.栈和队列/1.stack$ make
 gcc main.c -o main
 ./main
 push data = 1
@@ -82,7 +82,7 @@ Top element is -65532
 我定义的栈的大小是LEN = 3，这意味着如果我push了3次之后，就不能继续push了，会提示你栈满了才对。对应的程序是在这边。
 
 ```
-lcs@lcs-PC:~/Desktop/考研的代码/postgraduateReview/2.线性表/2.stack$ make
+lcs@lcs-PC:~/Desktop/考研的代码/postgraduateReview/3.栈和队列/1.stack$ make
 gcc main.c -o main
 ./main
 push data = 1                        -> 第1次push了数据1
