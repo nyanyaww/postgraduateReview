@@ -36,6 +36,7 @@
 
 typedef int DataType;
 #define LEN 5
+#define QUEUE_NULL -65535
 
 typedef struct Queue
 {
@@ -52,7 +53,7 @@ void init(Queue *queue)
 
 bool isFull(Queue *queue)
 {
-    return queue->front == LEN ? true : false;
+    return queue->rear == LEN ? true : false;
 }
 
 bool isEmpty(Queue *queue)
@@ -60,6 +61,7 @@ bool isEmpty(Queue *queue)
     return queue->front == queue->rear ? true : false;
 }
 
+// 入队是尾部后移
 void enQueue(Queue *queue, DataType data)
 {
     if (!isFull(queue))
@@ -68,20 +70,39 @@ void enQueue(Queue *queue, DataType data)
     }
     else
     {
-        printf("The queue is full, we can\'t enQueue...");
+        printf("The queue is full, we can\'t enQueue.\n");
     }
 }
 
+// 出队是首部后移
 void deQueue(Queue *queue)
 {
     if (!isEmpty(queue))
     {
-        queue->rear++;
+        queue->front++;
     }
     else
     {
-        printf("The queue is empty, we can\'t deQueue...");
+        printf("The queue is empty, we can\'t deQueue.\n");
     }
+}
+
+DataType getFront(Queue *queue)
+{
+    if (!isEmpty(queue))
+        return queue->data[queue->front];
+    else
+        return QUEUE_NULL;
+    printf("...\n");
+}
+
+DataType getRear(Queue *queue)
+{
+    if (!isFull(queue))
+        return queue->data[queue->rear - 1];
+    else
+        return QUEUE_NULL;
+    printf("The queue is full, we can\'t get rear element.\n");
 }
 
 void test(Queue *queue)
@@ -92,7 +113,15 @@ void test(Queue *queue)
 int main()
 {
     Queue *queue = (Queue *)malloc(sizeof(Queue));
+    int i = 0;
     init(queue);
-    enQueue(queue,1);
+    for (; i < 7; i++)
+    {
+        enQueue(queue, i);
+        if(i>=1)
+        deQueue(queue);
+        // printf("%d\n", getRear(queue));
+        printf("%d\n", getFront(queue));
+    }
     return 0;
 }
