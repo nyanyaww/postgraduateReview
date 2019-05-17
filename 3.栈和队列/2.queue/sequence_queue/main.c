@@ -1,30 +1,3 @@
-// 1.init()
-// int data[len];//连续内存，用来存放内容，长度为len
-// int front = 0;//队头，数组的下标
-// int rear = 0;//队尾，数组的下标
-// 2.isFull()
-// return rear==len?True:False;//rear==front
-// 3.push(int a)
-// //插入数据，只跟rear相关
-// if(!isFull){
-// data[rear++] = a;}// data[(rear++)%len] = a;}
-// 4.isEmpty()
-// return front==rear?True:False;//
-// 5.pop()
-// //删除数据，只跟front相关
-// If(!isEmpty()){
-// front++;}
-// 6.getFront()
-// if(isEmpty())
-// 		printf(“队列为空”)
-// else
-// 		return data[front]
-// 7.getRear()
-// if(isEmpty())
-// 	printf(“队列为空”)
-// else
-// 	return data[rear-1];
-
 /**
  * @auther: lcs
  * @data: 2019-5-16
@@ -34,10 +7,10 @@
 #include <malloc.h>
 #include <stdbool.h>
 
+
 typedef int DataType;
 #define LEN 3
 #define QUEUE_NULL -65535
-#define DEBUG true
 
 typedef struct Queue
 {
@@ -85,7 +58,7 @@ void enQueue(Queue *queue, DataType data)
 void deQueue(Queue *queue)
 {
 #if DEBUG
-    printf("[DEBUG] deQueue ->\t");
+    printf("[DEBUG] deQueue  ->\t");
 #endif
     if (!isEmpty(queue))
     {
