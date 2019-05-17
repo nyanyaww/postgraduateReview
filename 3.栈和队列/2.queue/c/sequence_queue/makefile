@@ -18,4 +18,4 @@ run:
 clean:
 	rm main
 
-.PHONY: clean
+.PHONY: clean run release debug compile_debug compile_release

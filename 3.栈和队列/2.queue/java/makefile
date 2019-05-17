@@ -1,10 +1,10 @@
 JAVA = java
-JAVAC = @javac
+JAVAC = javac
 
 all:compile run
 	
 compile:
-	$(JAVAC) *.java
+	$(JAVAC) Main.java
 run:
 	$(JAVA) Main
 clean:
