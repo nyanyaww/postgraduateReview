@@ -7,7 +7,6 @@
 #include <malloc.h>
 #include <stdbool.h>
 
-
 typedef int DataType;
 #define LEN 3
 #define QUEUE_NULL -65535
@@ -130,7 +129,7 @@ int main()
         printRear(queue);
     }
 
-    for (; i >0; i--)
+    for (; i > 0; i--)
     {
         deQueue(queue);
         printFront(queue);
