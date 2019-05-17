@@ -35,8 +35,9 @@
 #include <stdbool.h>
 
 typedef int DataType;
-#define LEN 5
+#define LEN 3
 #define QUEUE_NULL -65535
+#define DEBUG true
 
 typedef struct Queue
 {
@@ -64,9 +65,15 @@ bool isEmpty(Queue *queue)
 // 入队是尾部后移
 void enQueue(Queue *queue, DataType data)
 {
+#if DEBUG
+    printf("[DEBUG] enQueue  ->\t");
+#endif
     if (!isFull(queue))
     {
         queue->data[queue->rear++] = data;
+#if DEBUG
+        printf("%d\n", data);
+#endif
     }
     else
     {
@@ -77,9 +84,15 @@ void enQueue(Queue *queue, DataType data)
 // 出队是首部后移
 void deQueue(Queue *queue)
 {
+#if DEBUG
+    printf("[DEBUG] deQueue ->\t");
+#endif
     if (!isEmpty(queue))
     {
         queue->front++;
+#if DEBUG
+        printf("now front = %d, rear = %d\n", queue->front, queue->rear);
+#endif
     }
     else
     {
@@ -93,7 +106,6 @@ DataType getFront(Queue *queue)
         return queue->data[queue->front];
     else
         return QUEUE_NULL;
-    printf("...\n");
 }
 
 DataType getRear(Queue *queue)
@@ -102,7 +114,30 @@ DataType getRear(Queue *queue)
         return queue->data[queue->rear - 1];
     else
         return QUEUE_NULL;
-    printf("The queue is full, we can\'t get rear element.\n");
+}
+
+void printFront(Queue *queue)
+{
+#if DEBUG
+    printf("[DEBUG] getFront ->\t");
+#endif
+    DataType temp_front = getFront(queue);
+    if (temp_front != QUEUE_NULL)
+        printf("Front element is %d\n", temp_front);
+    else
+        printf("The queue is empty, we can\'t get front element.\n");
+}
+
+void printRear(Queue *queue)
+{
+#if DEBUG
+    printf("[DEBUG] getRear  ->\t");
+#endif
+    DataType temp_rear = getRear(queue);
+    if (temp_rear != QUEUE_NULL)
+        printf("Rear element is %d\n", temp_rear);
+    else
+        printf("The queue is full, we can\'t get rear element\n");
 }
 
 void test(Queue *queue)
@@ -115,13 +150,18 @@ int main()
     Queue *queue = (Queue *)malloc(sizeof(Queue));
     int i = 0;
     init(queue);
-    for (; i < 7; i++)
+    for (; i < 5; i++)
     {
-        enQueue(queue, i);
-        if(i>=1)
+        enQueue(queue, i + 1);
+        printFront(queue);
+        printRear(queue);
+    }
+
+    for (; i >0; i--)
+    {
         deQueue(queue);
-        // printf("%d\n", getRear(queue));
-        printf("%d\n", getFront(queue));
+        printFront(queue);
+        printRear(queue);
     }
     return 0;
 }
