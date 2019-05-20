@@ -41,7 +41,7 @@ Test 2:
 Test 3:
 [DEBUG] test     ->     Now front = 0, rear = 3
 [DEBUG] enQueue  ->     Add data 4 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 1, rear = 4
 [DEBUG] getFront ->     Front element is 2
 [DEBUG] getRear  ->     Rear element is 4
@@ -49,7 +49,7 @@ Test 3:
 Test 4:
 [DEBUG] test     ->     Now front = 1, rear = 4
 [DEBUG] enQueue  ->     Add data 5 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 2, rear = 0
 [DEBUG] getFront ->     Front element is 3
 [DEBUG] getRear  ->     Rear element is 5
@@ -57,7 +57,7 @@ Test 4:
 Test 5:
 [DEBUG] test     ->     Now front = 2, rear = 0
 [DEBUG] enQueue  ->     Add data 6 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 3, rear = 1
 [DEBUG] getFront ->     Front element is 4
 [DEBUG] getRear  ->     Rear element is 6
@@ -65,7 +65,7 @@ Test 5:
 Test 6:
 [DEBUG] test     ->     Now front = 3, rear = 1
 [DEBUG] enQueue  ->     Add data 7 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 4, rear = 2
 [DEBUG] getFront ->     Front element is 5
 [DEBUG] getRear  ->     Rear element is 7
@@ -73,7 +73,7 @@ Test 6:
 Test 7:
 [DEBUG] test     ->     Now front = 4, rear = 2
 [DEBUG] enQueue  ->     Add data 8 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 0, rear = 3
 [DEBUG] getFront ->     Front element is 6
 [DEBUG] getRear  ->     Rear element is 8
@@ -81,7 +81,7 @@ Test 7:
 Test 8:
 [DEBUG] test     ->     Now front = 0, rear = 3
 [DEBUG] enQueue  ->     Add data 9 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 1, rear = 4
 [DEBUG] getFront ->     Front element is 7
 [DEBUG] getRear  ->     Rear element is 9
@@ -89,7 +89,7 @@ Test 8:
 Test 9:
 [DEBUG] test     ->     Now front = 1, rear = 4
 [DEBUG] enQueue  ->     Add data 10 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 2, rear = 0
 [DEBUG] getFront ->     Front element is 8
 [DEBUG] getRear  ->     Rear element is 10
@@ -97,7 +97,7 @@ Test 9:
 Test 10:
 [DEBUG] test     ->     Now front = 2, rear = 0
 [DEBUG] enQueue  ->     Add data 11 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 3, rear = 1
 [DEBUG] getFront ->     Front element is 9
 [DEBUG] getRear  ->     Rear element is 11
@@ -105,7 +105,7 @@ Test 10:
 Test 11:
 [DEBUG] test     ->     Now front = 3, rear = 1
 [DEBUG] enQueue  ->     Add data 12 to the queue
-[DEBUG] deQueue  ->     Delete the rear element
+[DEBUG] deQueue  ->     Delete the front element
 [DEBUG] test     ->     Now front = 4, rear = 2
 [DEBUG] getFront ->     Front element is 10
 [DEBUG] getRear  ->     Rear element is 12

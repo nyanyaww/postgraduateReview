@@ -64,7 +64,7 @@ void deQueue(Queue *queue)
     {
         queue->front = (queue->front + 1) % LEN;
 #if DEBUG
-        printf("Delete the rear element\n");
+        printf("Delete the front element\n");
 #endif
     }
     else
