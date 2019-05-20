@@ -26,7 +26,6 @@ void init(Queue *queue)
 
 bool isFull(Queue *queue)
 {
-    // 此时
     return (queue->rear + 1) % LEN == queue->front ? true : false;
 }
 
