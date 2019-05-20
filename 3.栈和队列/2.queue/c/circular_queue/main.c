@@ -64,7 +64,7 @@ void deQueue(Queue *queue)
     {
         queue->front = (queue->front + 1) % LEN;
 #if DEBUG
-        printf("now front = %d, rear = %d\n", queue->front, queue->rear);
+        printf("Delete the rear element\n");
 #endif
     }
     else
@@ -119,7 +119,10 @@ void printRear(Queue *queue)
 
 void test(Queue *queue)
 {
-    printf("front = %d, rear = %d\n", queue->front, queue->rear);
+#if DEBUG
+    printf("[DEBUG] test     ->\t");
+    printf("Now front = %d, rear = %d\n", queue->front, queue->rear);
+#endif
 }
 
 int main()
@@ -130,13 +133,14 @@ int main()
     for (; i < 12; i++)
     {
         printf("Test %d:\n", i);
+        test(queue);
         enQueue(queue, i + 1);
         if (i >= 3)
             deQueue(queue);
-        // test(queue);
+        test(queue);
         printFront(queue);
         printRear(queue);
-        printf("===============================================\n");
+        printf("================================================\n");
     }
 
     // for (; i > 0; i--)
