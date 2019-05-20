@@ -125,7 +125,7 @@ int main()
     init(queue);
     for (; i < 12; i++)
     {
-        printf("Test %d:\n",i);
+        printf("Test %d:\n", i);
         enQueue(queue, i + 1);
         if (i >= 3)
             deQueue(queue);

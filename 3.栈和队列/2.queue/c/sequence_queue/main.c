@@ -8,7 +8,7 @@
 #include <stdbool.h>
 
 typedef int DataType;
-#define LEN 3
+#define LEN 5
 #define QUEUE_NULL -65535
 
 typedef struct Queue
@@ -119,21 +119,36 @@ void test(Queue *queue)
 
 int main()
 {
+    // Queue *queue = (Queue *)malloc(sizeof(Queue));
+    // int i = 0;
+    // init(queue);
+    // for (; i < 5; i++)
+    // {
+    //     enQueue(queue, i + 1);
+    //     printFront(queue);
+    //     printRear(queue);
+    // }
+
+    // for (; i > 0; i--)
+    // {
+    //     deQueue(queue);
+    //     printFront(queue);
+    //     printRear(queue);
+    // }
+
     Queue *queue = (Queue *)malloc(sizeof(Queue));
     int i = 0;
     init(queue);
-    for (; i < 5; i++)
+    for (; i < 12; i++)
     {
+        printf("Test %d:\n",i);
         enQueue(queue, i + 1);
+        if (i >= 3)
+            deQueue(queue);
+        // test(queue);
         printFront(queue);
         printRear(queue);
-    }
-
-    for (; i > 0; i--)
-    {
-        deQueue(queue);
-        printFront(queue);
-        printRear(queue);
+        printf("===============================================\n");
     }
     return 0;
 }
