@@ -39,7 +39,7 @@ Test 4:
 [DEBUG] enQueue  ->     Add data 5 to the queue
 [DEBUG] deQueue  ->     now front = 2, rear = 0
 [DEBUG] getFront ->     Front element is 3
-[DEBUG] getRear  ->     Rear element is 0
+[DEBUG] getRear  ->     Rear element is 5
 ===============================================
 Test 5:
 [DEBUG] enQueue  ->     Add data 6 to the queue
@@ -69,7 +69,7 @@ Test 9:
 [DEBUG] enQueue  ->     Add data 10 to the queue
 [DEBUG] deQueue  ->     now front = 2, rear = 0
 [DEBUG] getFront ->     Front element is 8
-[DEBUG] getRear  ->     Rear element is 0
+[DEBUG] getRear  ->     Rear element is 10
 ===============================================
 Test 10:
 [DEBUG] enQueue  ->     Add data 11 to the queue
@@ -108,7 +108,7 @@ Rear element is 4
 ===============================================
 Test 4:
 Front element is 3
-Rear element is 0
+Rear element is 5
 ===============================================
 Test 5:
 Front element is 4
@@ -128,7 +128,7 @@ Rear element is 9
 ===============================================
 Test 9:
 Front element is 8
-Rear element is 0
+Rear element is 10
 ===============================================
 Test 10:
 Front element is 9

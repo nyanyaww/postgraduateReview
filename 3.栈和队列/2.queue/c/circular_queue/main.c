@@ -84,7 +84,11 @@ DataType getFront(Queue *queue)
 DataType getRear(Queue *queue)
 {
     if (!isFull(queue))
+    {
+        if (queue->rear == 0)
+            return queue->data[LEN - 1];
         return queue->data[queue->rear - 1];
+    }
     else
         return QUEUE_NULL;
 }
