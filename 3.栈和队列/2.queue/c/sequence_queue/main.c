@@ -1,6 +1,6 @@
 /**
- * @auther: lcs
- * @data: 2019-5-16
+ * @auther  lcs
+ * @data    2019-5-16
  **/
 
 #include <stdio.h>

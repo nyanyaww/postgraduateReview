@@ -1,6 +1,6 @@
 /**
- * @auther: lcs
- * @data: 2019-5-17
+ * @auther  lcs
+ * @data    2019-5-17
  **/
 
 #include <stdio.h>
@@ -124,14 +124,16 @@ int main()
     Queue *queue = (Queue *)malloc(sizeof(Queue));
     int i = 0;
     init(queue);
-    for (; i < 30; i++)
+    for (; i < 12; i++)
     {
+        printf("Test %d:\n",i);
         enQueue(queue, i + 1);
-        if (i >= 1)
+        if (i >= 3)
             deQueue(queue);
+        // test(queue);
         printFront(queue);
         printRear(queue);
-        // test(queue);
+        printf("===============================================\n");
     }
 
     // for (; i > 0; i--)

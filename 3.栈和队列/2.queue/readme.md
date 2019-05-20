@@ -25,7 +25,7 @@
 要点
 
 * init的时候front = 0, rear = 0。
-* enQueue的时候是先判断队列是否为满，若队列不满那么**rear = (rear + 1)% LEN**。
+* enQueue的时候是先判断队列是否为满，若队列不满那么**rear = (rear + 1) % LEN**。
 * deQueue的时候是先判断队列是否为空，若队列不空那么**front = (front + 1) % LEN**。
 * isFull是判断(rear + 1) % LEN是否等于front，等于LEN那么说明队列已经满了，否则说明队列不满。
 * isEmpty是判断front是否等于rear，如果等于说明为空，否则队列不空。
