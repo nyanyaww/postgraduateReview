@@ -1,3 +1,3 @@
 # postgraduateReview
 
-考研时练习的代码
+平时练习数据结构的代码
